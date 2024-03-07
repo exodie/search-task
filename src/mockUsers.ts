@@ -1,4 +1,6 @@
-export const mockUsers = [
+import { User } from "./types/";
+
+export const mockUsers: User[] = [
   {
     id: 1,
     firstName: "Terry",
@@ -10,7 +12,7 @@ export const mockUsers = [
   },
   {
     id: 2,
-    firstName: "Terry",
+    firstName: "Mick",
     lastName: "Medhurst",
     image: "https://robohash.org/Terry.png?set=set4",
     address: {
@@ -19,7 +21,16 @@ export const mockUsers = [
   },
   {
     id: 3,
-    firstName: "Terry",
+    firstName: "James",
+    lastName: "Medhurst",
+    image: "https://robohash.org/Terry.png?set=set4",
+    address: {
+      city: "Washington",
+    },
+  },
+  {
+    id: 4,
+    firstName: "Terry1",
     lastName: "Medhurst",
     image: "https://robohash.org/Terry.png?set=set4",
     address: {

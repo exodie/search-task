@@ -18,7 +18,17 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    // Посмотреть что здесь не так, не работает сокращение ссылок
+    "baseUrl": "./src",
+    "paths": {
+      "components": ["components/*"],
+      "api": ["api/*"],
+      "context": ["context/*"],
+      "tools": ["tools/*"],
+      "types": ["types/*"]
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
