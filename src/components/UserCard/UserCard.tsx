@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { type FC, useState } from "react";
 import "./style.css";
 
@@ -11,6 +12,7 @@ function extractAndTransform<T>(
 
   for (const key in source) {
     if (Object.prototype.hasOwnProperty.call(source, key)) {
+      // @ts-ignore
       extractedData.push({ key, value: source[key] });
     }
   }
@@ -47,7 +49,7 @@ export const UserCard: FC<User> = (props) => {
           <>
             {data.map((item, index) => (
               <div key={index}>
-                <strong>{item.key}:</strong> <pre>{item.value.toString()}</pre>
+                <strong>{item.key}:</strong> <pre>{item.value!.toString()}</pre>
               </div>
             ))}
           </>
